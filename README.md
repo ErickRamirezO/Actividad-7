@@ -16,10 +16,10 @@ username: usuario
 password: contraseña 
 ![Ejemplo de imagen](images/login_post.JPG)
 
-Debería recibir un 'Status: 200 OK'
+Debería recibir un 'Status: 200 OK' junto con el token para usar en las siguientes peticiones
 ![Ejemplo de imagen](images/response_token.JPG)
 
-#Pacientes  
+# Pacientes  
 ## Obtener todos los pacientes
 
 - **Método:** `GET`
