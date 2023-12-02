@@ -1,0 +1,12 @@
+@model WebApplication1.Models.Paciente
+
+<h1>Crear Paciente</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Crear paciente</button>
+</form>

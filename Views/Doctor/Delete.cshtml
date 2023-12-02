@@ -1,0 +1,28 @@
+@model WebApplication1.Models.Doctor
+
+<h1>Eliminar Doctor</h1>
+
+<h3>¿Estás seguro que deseas eliminar este doctor?</h3>
+<div>
+    <h4>Detalles del Doctor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Especialidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Especialidad)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" />
+        <a asp-action="Index">Cancelar</a>
+    </form>
+</div>

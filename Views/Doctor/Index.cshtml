@@ -1,0 +1,31 @@
+@model List<WebApplication1.Models.Doctor>
+
+<h1>Lista de Doctores</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Especialidad</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var doctor in Model)
+        {
+            <tr>
+                <td>@doctor.Id</td>
+                <td>@doctor.Nombre</td>
+                <td>@doctor.Especialidad</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@doctor.Id" class="btn btn-primary">Detalles</a> |
+                    <a asp-action="Edit" asp-route-id="@doctor.Id" class="btn btn-primary">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@doctor.Id" class="btn btn-primary">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create">Crear Nuevo Doctor</a>

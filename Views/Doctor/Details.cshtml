@@ -1,0 +1,26 @@
+@model WebApplication1.Models.Doctor
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Doctor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Especialidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Especialidad)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a> |
+    <a asp-action="Index">Regresar</a>
+</p>
