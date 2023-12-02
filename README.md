@@ -17,7 +17,7 @@ password: contraseña
 ![Ejemplo de imagen](images/login_post.JPG)
 
 Debería recibir un 'Status: 200 OK'
-![Ejemplo de imagen](images/response_post.JPG)
+![Ejemplo de imagen](images/response_token.JPG)
 
 #Pacientes  
 ## Obtener todos los pacientes
