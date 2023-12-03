@@ -13,13 +13,20 @@ http://localhost:5149/api/doctor/login?username=usuario&password=contraseña
 ```
 Y en parametros se debe incluir:  
 username: usuario  
-password: contraseña 
+password: contraseña   
+
 ![Ejemplo de imagen](images/login_post.JPG)
 
-Debería recibir un 'Status: 200 OK' junto con el token para usar en las siguientes peticiones
-![Ejemplo de imagen](images/response_token.JPG)
+Debería recibir un 'Status: 200 OK' junto con el token para usar en las siguientes peticiones  
+
+![Ejemplo de imagen](images/response_token.JPG)  
 
 # Pacientes  
+
+Una vez que se obtenga el `token` tenemos que ubicarlo en la pestaña de Authorization y en `Type` seleccionamos Bearer Token y pegamos el Token obtenido anteriormente  
+
+![Ejemplo de imagen](images/token.JPG)  
+
 ## Obtener todos los pacientes
 
 - **Método:** `GET`
@@ -27,20 +34,33 @@ Debería recibir un 'Status: 200 OK' junto con el token para usar en las siguien
 - **Descripción:** Obtiene todos los pacientes almacenados.
 
 Resultado esperado:  
-![Ejemplo de imagen](images/login_post.JPG)
+![Ejemplo de imagen](images/pacientes_all_get.JPG)
 
 ## Obtener un paciente por ID
 
 - **Método:** `GET`
-- **URL:** `https://tu-url/api/Paciente/{id}`
+- **URL:** `http://localhost:5149/api/paciente/1`
 - **Descripción:** Obtiene los detalles de un paciente específico por su ID.
+
+Resultado esperado:  
+![Ejemplo de imagen](images/pacientes_id_get.JPG)post_create_conf
 
 ## Crear un nuevo paciente
 
 - **Método:** `POST`
-- **URL:** `https://tu-url/api/Paciente/{id}`
+- **URL:** `http://localhost:5149/api/paciente`
 - **Descripción:** Crea un nuevo paciente.
-- **Datos del cuerpo (Body):** Nombre del paciente en formato JSON.
+- **Datos del cuerpo (Body):** Se debe enviar el id y el nombre del paciente como el siguiente ejemplo en formato JSON
+```bash
+{
+    "id": 4,
+    "nombre": "Israel"
+}
+```
+![Ejemplo de imagen](images/post_create_conf.JPG)  
+
+Resultado esperado:  
+![Ejemplo de imagen](images/post_create_paciente.JPG)
 
 ## Actualizar un paciente existente
 
