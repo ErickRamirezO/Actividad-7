@@ -43,7 +43,7 @@ Resultado esperado:
 - **Descripción:** Obtiene los detalles de un paciente específico por su ID.
 
 Resultado esperado:  
-![Ejemplo de imagen](images/pacientes_id_get.JPG)post_create_conf
+![Ejemplo de imagen](images/pacientes_id_get.JPG)
 
 ## Crear un nuevo paciente
 
