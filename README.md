@@ -101,55 +101,17 @@ Resultado esperado:
 ## Obtener un doctor por ID
 
 - **Método:** `GET`
-- **URL:** `http://localhost:5149/api/doctor/1`
+- **URL:** `http://localhost:5149/api/doctor/{id}`
 - **Descripción:** Obtiene los detalles de un doctor específico por su ID.
 
 Resultado esperado:  
 ![Ejemplo de imagen](images/doctor_id_get.JPG)
 
-## Crear un nuevo doctor
-
-- **Método:** `POST`
-- **URL:** `http://localhost:5149/api/doctor`
-- **Descripción:** Crea un nuevo doctor.
-- **Datos del cuerpo (Body):** Se debe enviar el id, el nombre del doctor y especialidad como el siguiente ejemplo en formato JSON
-```bash
-{
-    "id": 2,
-    "nombre": "Erick",
-    "especialidad": "Cardiología"
-}  
-```
-
-![Ejemplo de imagen](images/post_create_conf.JPG)  
-
-Resultado esperado:  
-![Ejemplo de imagen](images/post_create_paciente.JPG)
-
-## Actualizar un paciente existente
-
-- **Método:** `PUT`
-- **URL:** `http://localhost:5149/api/paciente/{id}`
-- **Descripción:** Actualiza los datos de un paciente existente por su ID.
-- **Datos del cuerpo (Body):** Datos actualizados del paciente en formato JSON, por ejemplo se debe incluir el id y luego los demás datos:
-```bash
-{
-    "id": 4,
-    "nombre": "Olga"
-}
-```
-
-Resultado esperado:  
-![Ejemplo de imagen](images/pacientes_put.JPG)
-
-## Eliminar un paciente
+## Eliminar un doctor
 
 - **Método:** `DELETE`
-- **URL:** `http://localhost:5149/api/paciente/{id}`
-- **Descripción:** Elimina un paciente existente por su ID.
-
-- Resultado esperado:  
-![Ejemplo de imagen](images/pacientes_delete.JPG)
+- **URL:** `http://localhost:5149/api/doctor/{id}`
+- **Descripción:** Elimina un doctor existente por su ID.
 
 
 
