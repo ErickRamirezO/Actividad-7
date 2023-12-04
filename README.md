@@ -7,7 +7,8 @@ A continuación se muestran los detalles de cómo realizar operaciones CRUD (Cre
 
 ## Configuración inicial  
 
-Antes de realizar las solicitudes, asegúrate de realizar el iniciar el login usando la siguiente direccion
+Antes de realizar las solicitudes, asegúrate de correr el proyecto con el comando ``dotnet run` desde la terminal.
+Posteriormente debes iniciar POSTMAN e iniciar sesión usando la siguiente direccion
 ```bash
 http://localhost:5149/api/doctor/login?username=usuario&password=contraseña
 ```
