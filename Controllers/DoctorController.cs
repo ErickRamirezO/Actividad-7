@@ -146,35 +146,6 @@ namespace WebApplication1.Controllers
         return Ok(doctor);
     }
 
-    [HttpPost]
-    public IActionResult CreateDoctor([FromBody] Doctor doctor)
-    {
-        if (ModelState.IsValid)
-        {
-            _context.Add(doctor);
-            _context.SaveChanges();
-            return Ok(doctor);
-        }
-        return BadRequest();
-    }
-
-    [HttpPut("{id}")]
-    public IActionResult UpdateDoctor(int id, [FromBody] Doctor doctor)
-    {
-        if (id != doctor.Id)
-        {
-            return BadRequest();
-        }
-
-        if (ModelState.IsValid)
-        {
-            _context.Update(doctor);
-            _context.SaveChanges();
-            return Ok(doctor);
-        }
-        return BadRequest();
-    }
-
     [HttpDelete("{id}")]
     public IActionResult DeleteDoctor(int id)
     {
